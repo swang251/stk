@@ -33,6 +33,9 @@ option(COMPILE_PROJECTS "Compile all the example projects" ON)
 include_directories("./include")
 file(GLOB STK_SRC "./src/*.cpp") # GLOB instead of GLOB_RECURSE as the asio depends on system
 
+include_directories("./rtaudio")
+list(APPEND STK_SRC "./rtaudio/RtAudio.cpp")
+
 #========================================#
 #========== Realtime Support ============#
 #========================================#
